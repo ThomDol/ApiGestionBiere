@@ -1,20 +1,20 @@
 package com.tom.GestionBieres.Mapper;
 
-import com.tom.GestionBieres.entity.TypeBiere;
-import com.tom.GestionBieres.entityDto.TypeBiereDto;
+import com.tom.GestionBieres.entity.Typebiere;
+import com.tom.GestionBieres.entityDto.TypebiereDto;
 
 public class TypeBiereMapper {
-    public static TypeBiere mapToTypeBiere (TypeBiereDto typeBiereDto){
-        return new TypeBiere(
-                typeBiereDto.getIdType(),
-                typeBiereDto.getNomType()
+    public static Typebiere mapToTypeBiere (TypebiereDto typebiereDto){
+        return new Typebiere(
+                typebiereDto.getIdType(),
+                typebiereDto.getNomType()
         );
     }
 
-    public static TypeBiereDto mapToTypeBiereDto (TypeBiere typeBiere){
-        return new TypeBiereDto (
-                typeBiere.getIdType(),
-                typeBiere.getNomType()
+    public static TypebiereDto mapToTypeBiereDto (Typebiere typebiere){
+        return new TypebiereDto (
+                typebiere.getIdType(),
+                typebiere.getNomType()
         );
     }
 }

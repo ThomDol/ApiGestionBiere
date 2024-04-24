@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TypeBiere {
+public class Typebiere {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_TYPE")

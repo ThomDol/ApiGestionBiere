@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @Entity
 @Data
@@ -12,10 +13,12 @@ import lombok.NoArgsConstructor;
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NonNull
     @Column(name="ID_ARTICLE")
     private Long idArticle;
 
     @Column(name="NOM_ARTICLE")
+    @NonNull
     private String  nomArticle;
 
     @Column(name="PRIX_ACHAT")
@@ -28,6 +31,7 @@ public class Article {
     private float titrage;
 
     @ManyToOne
+    @NonNull
     @JoinColumn(name="ID_MARQUE",referencedColumnName="ID_MARQUE")
     private Marque marque;
 
@@ -37,5 +41,5 @@ public class Article {
 
     @ManyToOne
     @JoinColumn(name="ID_TYPE",referencedColumnName="ID_TYPE")
-    private TypeBiere typeBiere;
+    private Typebiere type;
 }

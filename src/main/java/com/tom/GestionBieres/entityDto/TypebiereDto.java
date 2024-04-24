@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TypeBiereDto {
+public class TypebiereDto {
     private Long idType;
 
 

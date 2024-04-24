@@ -1,16 +1,22 @@
 package com.tom.GestionBieres.entity;
 
+import com.tom.GestionBieres.entity.KeyComposite.VendreId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.io.Serializable;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Vente {
+@IdClass(VendreId.class)
+public class Vendre implements Serializable {
     @Id
+    @NonNull
     @ManyToOne
     @JoinColumns({
             @JoinColumn(name="ANNEE",referencedColumnName="ANNEE"),
@@ -19,6 +25,7 @@ public class Vente {
     private Ticket ticket;
 
     @Id
+    @NonNull
     @ManyToOne
     @JoinColumn(name="ID_ARTICLE",referencedColumnName="ID_ARTICLE")
     private Article article;
