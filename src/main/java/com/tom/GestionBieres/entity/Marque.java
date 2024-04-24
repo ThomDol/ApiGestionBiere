@@ -18,11 +18,11 @@ public class Marque {
     @Column(name="NOM_MARQUE")
     private String nomMarque;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn (name="ID_PAYS",referencedColumnName="ID_PAYS", nullable = false)
     private Pays pays;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="ID_FABRICANT",referencedColumnName="ID_FABRICANT")
     private Fabricant fabricant;
 }
