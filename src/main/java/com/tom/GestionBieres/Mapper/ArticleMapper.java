@@ -13,8 +13,12 @@ public class ArticleMapper {
                 article.getNomArticle(),
                 article.getPrixAchat(),
                 article.getVolume(),
-                article.getTitrage()
+                article.getTitrage()!=null?article.getTitrage():null,
+                article.getMarque().getNomMarque(),
+                article.getCouleur()!=null?article.getCouleur().getNomCouleur():null,
+                article.getType()!=null?article.getType().getNomType():null
         );
+
     }
 
     public static Article mapToArticle (ArticleDto articleDto, Marque marque, Couleur couleur, Typebiere type){

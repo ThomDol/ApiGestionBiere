@@ -10,12 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ArticleDto {
     private int idArticle;
-
     private String  nomArticle;
-
     private float prixAchat;
-
     private int volume;
-
-    private float titrage;
+    private Float titrage;
+    private String nomMarque;
+    private String nomCouleur;
+    private String nomType;
 }

@@ -28,7 +28,7 @@ public class Article {
     private int volume;
 
     @Column(name="TITRAGE")
-    private float titrage;
+    private Float titrage;
 
     @ManyToOne
     @NonNull

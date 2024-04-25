@@ -7,10 +7,20 @@ import com.tom.GestionBieres.entityDto.MarqueDto;
 
 public class MarqueMapper {
     public static MarqueDto mapToMarqueDto (Marque marque){
+        if(marque.getFabricant()!=null){
         return new MarqueDto(
                 marque.getIdMarque(),
-                marque.getNomMarque()
-        );
+                marque.getNomMarque(),
+                marque.getPays().getNomPays(),
+                marque.getFabricant().getNomFabricant()
+        );}
+        else{
+            return new MarqueDto(
+                marque.getIdMarque(),
+                marque.getNomMarque(),
+                marque.getPays().getNomPays(),
+                ""
+        );}
     }
 
     public static Marque mapToMarque (MarqueDto marqueDto, Pays pays, Fabricant fabricant){

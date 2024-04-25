@@ -13,4 +13,6 @@ public class MarqueDto {
 
 
     private String nomMarque;
+    private String paysOrigine;
+    private String fabricant;
 }
