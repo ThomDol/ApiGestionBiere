@@ -8,4 +8,5 @@ import java.io.Serializable;
 
 @Repository
 public interface TicketRepository extends JpaRepository<Ticket, Serializable> {
+    Ticket findByAnneeAndNumTicket(int annee,int numTicket);
 }
