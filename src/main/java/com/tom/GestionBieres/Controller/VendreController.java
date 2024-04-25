@@ -26,4 +26,10 @@ public class VendreController {
     public List<VendreDto> getVentesByAnnee(@PathVariable int annee){
         return this.vendreService.findByAnnee(annee);
     }
+
+    @GetMapping(path="ventes/{annee}/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<VendreDto> getVentesByAnneeAndByArticle (@PathVariable int annee,@PathVariable String name){
+        return this.vendreService.findByAnneeAndByArticleName(annee,name);
+    }
 }
