@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MarqueDto {
-    private Long idMarque;
+    private int idMarque;
 
 
     private String nomMarque;

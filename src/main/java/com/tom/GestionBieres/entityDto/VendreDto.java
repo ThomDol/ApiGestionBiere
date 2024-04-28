@@ -11,6 +11,7 @@ public class VendreDto {
     private int annee;
     private int numTicket;
     private String nomArticle;
+    private int volume;
     private int quantite;
     private float prixVente;
 }

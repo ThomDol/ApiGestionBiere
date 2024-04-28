@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 @AllArgsConstructor
 @RequestMapping(path="/biere")
 public class VendreController {
@@ -27,9 +28,9 @@ public class VendreController {
         return this.vendreService.findByAnnee(annee);
     }
 
-    @GetMapping(path="ventes/{annee}/{name}")
+    @GetMapping(path="ventes/{annee}/{name}/{volume}")
     @ResponseStatus(HttpStatus.OK)
-    public List<VendreDto> getVentesByAnneeAndByArticle (@PathVariable int annee,@PathVariable String name){
-        return this.vendreService.findByAnneeAndByArticleName(annee,name);
+    public List<VendreDto> getVentesByAnneeAndByArticle (@PathVariable int annee,@PathVariable String name,@PathVariable int volume){
+        return this.vendreService.findByAnneeAndByArticleNameAndVolume(annee,name,volume);
     }
 }

@@ -23,4 +23,10 @@ public class ArticleServiceImpl implements GestionBiereService<ArticleDto> {
         return articles.stream().map(article->
                 ArticleMapper.mapToArticleDto(article)).collect(Collectors.toList());
     }
+
+    public ArticleDto loadByNameAndVolume(String name,int volume){
+       return ArticleMapper.mapToArticleDto(this.articleRepository.findByNomArticleAndVolume(name,volume));
+    }
+
+
 }

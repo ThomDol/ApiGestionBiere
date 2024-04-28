@@ -13,7 +13,7 @@ public class Fabricant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_FABRICANT")
-    private Long idFabricant;
+    private int idFabricant;
 
     @Column(name="NOM_FABRICANT")
     private String nomFabricant;

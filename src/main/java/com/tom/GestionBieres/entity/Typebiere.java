@@ -13,7 +13,7 @@ public class Typebiere {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_TYPE")
-    private Long idType;
+    private int idType;
 
     @Column(name="NOM_TYPE")
     private String nomType;

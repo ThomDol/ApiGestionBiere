@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FabricantDto {
-    private Long idFabricant;
+    private int idFabricant;
 
 
     private String nomFabricant;

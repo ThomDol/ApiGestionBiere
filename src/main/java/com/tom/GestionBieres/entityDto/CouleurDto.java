@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CouleurDto {
-    private Long idCouleur;
+    private int idCouleur;
 
 
     private String nomCouleur;

@@ -13,7 +13,7 @@ public class Continent {
     @Id
     @Column(name="ID_CONTINENT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContinent;
+    private int idContinent;
 
     @Column(name="NOM_CONTINENT")
     private String nomContinent;

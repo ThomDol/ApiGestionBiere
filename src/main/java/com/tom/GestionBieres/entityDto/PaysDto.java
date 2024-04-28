@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaysDto {
-    private Long idPays;
+    private int idPays;
 
 
     private String nomPays;

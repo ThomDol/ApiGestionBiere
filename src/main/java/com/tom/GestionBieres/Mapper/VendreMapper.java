@@ -16,6 +16,7 @@ public class VendreMapper {
                 vendre.getTicket().getAnnee(),
                 vendre.getTicket().getNumTicket(),
                 vendre.getArticle().getNomArticle(),
+                vendre.getArticle().getVolume(),
                 vendre.getQuantite(),
                 vendre.getPrixVente()
         );
@@ -24,7 +25,7 @@ public class VendreMapper {
     public static Vendre mapToVendre (VendreDto vendreDto){
         return new Vendre(
         ticketRepository.findByAnneeAndNumTicket(vendreDto.getAnnee(), vendreDto.getNumTicket()),
-        articleRepository.findByNomArticle(vendreDto.getNomArticle()),
+        articleRepository.findByNomArticleAndVolume(vendreDto.getNomArticle(),vendreDto.getVolume()),
         vendreDto.getQuantite(),
         vendreDto.getPrixVente());
 
