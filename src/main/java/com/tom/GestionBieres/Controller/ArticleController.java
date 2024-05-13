@@ -23,6 +23,12 @@ public class ArticleController {
         return this.articleService.findAll();
     }
 
+    @GetMapping(path="/articlesByMarque/{idMarque}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ArticleDto> getAllArticlesByMarque(@PathVariable Long idMarque){
+        return this.articleService.getAllArticleByMarque(idMarque);
+    }
+
 
 
 }

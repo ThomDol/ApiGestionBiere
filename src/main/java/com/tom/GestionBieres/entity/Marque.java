@@ -13,7 +13,7 @@ public class Marque {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_MARQUE")
-    private int idMarque;
+    private long idMarque;
 
     @Column(name="NOM_MARQUE")
     private String nomMarque;

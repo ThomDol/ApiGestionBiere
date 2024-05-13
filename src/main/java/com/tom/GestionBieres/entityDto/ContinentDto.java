@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContinentDto {
-    private int idContinent;
+    private long idContinent;
 
 
     private String nomContinent;

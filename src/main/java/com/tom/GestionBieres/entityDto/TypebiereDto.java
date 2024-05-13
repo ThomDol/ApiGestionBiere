@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TypebiereDto {
-    private int idType;
+    private long idType;
 
 
     private String nomType;

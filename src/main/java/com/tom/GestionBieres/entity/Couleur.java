@@ -13,7 +13,7 @@ public class Couleur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_COULEUR")
-    private int idCouleur;
+    private long idCouleur;
 
     @Column(name="NOM_COULEUR")
     private String nomCouleur;
