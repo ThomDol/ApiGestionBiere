@@ -13,7 +13,7 @@ public class Pays {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_PAYS")
-    private long idPays;
+    private int idPays;
 
     @Column(name="NOM_PAYS")
     private String nomPays;
