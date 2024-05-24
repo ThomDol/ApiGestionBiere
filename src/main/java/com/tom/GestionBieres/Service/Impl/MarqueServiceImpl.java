@@ -1,30 +1,26 @@
-package com.tom.GestionBieres.Service;
+package com.tom.GestionBieres.Service.Impl;
 
 import com.tom.GestionBieres.Mapper.MarqueMapper;
+import com.tom.GestionBieres.Service.MarqueService;
 import com.tom.GestionBieres.entity.Marque;
-import com.tom.GestionBieres.entity.Pays;
 import com.tom.GestionBieres.entityDto.MarqueDto;
 import com.tom.GestionBieres.repository.MarqueRepository;
-import com.tom.GestionBieres.repository.PaysRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Service
 @AllArgsConstructor
-public class MarqueServiceImpl implements GestionBiereService<MarqueDto>{
+public class MarqueServiceImpl implements MarqueService {
     private MarqueRepository marqueRepository;
 
     @Override
     public List<MarqueDto> findAll() {
         List<Marque> marques= this.marqueRepository.findAll();
 
-        return marques.stream().map(marque->
-                MarqueMapper.mapToMarqueDto(marque)).collect(Collectors.toList());}
+        return marques.stream().map(MarqueMapper::mapToMarqueDto).toList();}
 
 
 

@@ -11,6 +11,8 @@ import java.util.List;
 
 @Repository
 public interface VendreRepository extends JpaRepository<Vendre, Serializable> {
-    Vendre findByArticle(Article article);
+
     List<Vendre> findAllByTicketAndArticle(Ticket ticket,Article article);
+    List<Vendre> findAllByArticle(Article article);
+    List<Vendre> findAllByTicket(Ticket ticket);
 }

@@ -1,5 +1,6 @@
 package com.tom.GestionBieres.Controller;
 
+import com.tom.GestionBieres.Service.CouleurService;
 import com.tom.GestionBieres.Service.GestionBiereService;
 import com.tom.GestionBieres.entityDto.CouleurDto;
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping(path="/biere")
 public class CouleurController {
-    private GestionBiereService<CouleurDto> couleurService;
+    private CouleurService couleurService;
 
     @GetMapping(path="/couleurs")
     @ResponseStatus(HttpStatus.OK)

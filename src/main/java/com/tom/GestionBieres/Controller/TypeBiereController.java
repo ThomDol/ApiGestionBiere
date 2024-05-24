@@ -1,6 +1,7 @@
 package com.tom.GestionBieres.Controller;
 
 import com.tom.GestionBieres.Service.GestionBiereService;
+import com.tom.GestionBieres.Service.TypeBiereService;
 import com.tom.GestionBieres.entity.Typebiere;
 import com.tom.GestionBieres.entityDto.TypebiereDto;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping(path="/biere")
 public class TypeBiereController {
-    private GestionBiereService<TypebiereDto> typeBiereService;
+    private TypeBiereService typeBiereService;
 
     @GetMapping(path="/types")
     @ResponseStatus(HttpStatus.OK)

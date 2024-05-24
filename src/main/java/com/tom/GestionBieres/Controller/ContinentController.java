@@ -1,5 +1,6 @@
 package com.tom.GestionBieres.Controller;
 
+import com.tom.GestionBieres.Service.ContinentService;
 import com.tom.GestionBieres.Service.GestionBiereService;
 import com.tom.GestionBieres.entityDto.ContinentDto;
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path="/biere")
 public class ContinentController {
-    private GestionBiereService<ContinentDto> continentService;
+    private ContinentService continentService;
 
 @GetMapping(path="/continents")
 @ResponseStatus(HttpStatus.OK)

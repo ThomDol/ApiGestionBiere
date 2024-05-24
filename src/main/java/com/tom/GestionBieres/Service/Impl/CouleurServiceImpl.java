@@ -1,6 +1,7 @@
-package com.tom.GestionBieres.Service;
+package com.tom.GestionBieres.Service.Impl;
 
 import com.tom.GestionBieres.Mapper.CouleurMapper;
+import com.tom.GestionBieres.Service.CouleurService;
 import com.tom.GestionBieres.entity.Couleur;
 import com.tom.GestionBieres.entityDto.CouleurDto;
 import com.tom.GestionBieres.repository.CouleurRepository;
@@ -12,8 +13,10 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class CouleurServiceImpl implements GestionBiereService<CouleurDto>{
+public class CouleurServiceImpl implements CouleurService {
     private CouleurRepository couleurRepository;
+
+
     @Override
     public List<CouleurDto> findAll() {
         List<Couleur> couleurs = this.couleurRepository.findAll();
